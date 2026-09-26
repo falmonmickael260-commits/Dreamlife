@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
 import { HERO_ROTATION } from '../data/photos';
+import { Marquee } from './Marquee';
 
 /**
- * Trois photographies documentaires en fondu très lent. Le texte tient en
- * quatre lignes : la photographie doit porter, pas le paragraphe.
+ * Trois photographies documentaires en fondu très lent, et un titre dont les
+ * lignes montent depuis leur masque. Le texte tient en quatre lignes : c'est la
+ * photographie qui doit porter.
  */
 export function Hero() {
   const [i, setI] = useState(0);
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const id = window.setInterval(() => setI((n) => (n + 1) % HERO_ROTATION.length), 6400);
+    const id = window.setInterval(() => setI((n) => (n + 1) % HERO_ROTATION.length), 7000);
     return () => window.clearInterval(id);
   }, []);
 
@@ -35,30 +37,38 @@ export function Hero() {
         <div className="hero__scrim" />
       </div>
 
-      <div className="hero__body wrap">
-        <p className="hero__kicker">Dix villes · Quatre continents</p>
-
-        <h1 className="hero__title">
-          Découvrez le monde
-          <br />
-          <em>à travers ceux qui l’habitent.</em>
-        </h1>
-
-        <p className="hero__lead">
-          Un habitant vous ouvre quelques heures de sa vie.
-          <br />
-          L’hébergement n’est jamais obligatoire.
+      <div className="hero__body wrap" data-line-group>
+        <p className="mask hero__kicker">
+          <span data-line>La plateforme des rencontres locales</span>
         </p>
 
-        <div className="hero__cta">
+        <h1 className="hero__title">
+          <span className="mask">
+            <span data-line>Découvrez le monde</span>
+          </span>
+          <span className="mask">
+            <em data-line>à travers ceux</em>
+          </span>
+          <span className="mask">
+            <em data-line>qui l’habitent.</em>
+          </span>
+        </h1>
+
+        <p className="mask hero__lead">
+          <span data-line>Un habitant vous ouvre quelques heures de sa vie.</span>
+        </p>
+
+        <div className="hero__cta" data-rise data-rise-delay="900">
           <a className="btn" href="#destinations">
-            Voir les destinations
+            <span>Voir les destinations</span>
           </a>
-          <a className="btn btn--ghost" href="#rencontres">
+          <a className="link hero__link" href="#rencontres">
             Ce que l’on peut vivre
           </a>
         </div>
       </div>
+
+      <Marquee />
 
       <p className="hero__credit">
         <span>{current.caption}</span>

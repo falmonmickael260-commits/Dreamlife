@@ -9,16 +9,21 @@ export function Trust() {
   return (
     <section className="section trust">
       <div className="wrap">
-        <div className="eyebrow reveal">
+        <div className="eyebrow" data-rise>
           <span className="eyebrow__num">06</span>
           <span>Ce qui tient la plateforme</span>
         </div>
-        <h2 className="trust__title reveal" data-reveal-delay="80">
-          Une rencontre demande plus de garanties qu’une chambre
+        <h2 className="trust__title" data-line-group>
+          <span className="mask">
+            <span data-line>Une rencontre demande</span>
+          </span>
+          <span className="mask">
+            <em data-line>plus de garanties qu’une chambre</em>
+          </span>
         </h2>
-        <ul className="trust__grid">
-          {POINTS.map((p, i) => (
-            <li className="trust__item reveal" data-reveal-delay={(i % 2) * 90} key={p.title}>
+        <ul className="trust__grid" data-rise-group>
+          {POINTS.map((p) => (
+            <li className="trust__item" key={p.title}>
               <h3>{p.title}</h3>
               <p>{p.body}</p>
             </li>

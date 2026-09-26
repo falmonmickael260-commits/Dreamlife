@@ -1,11 +1,14 @@
 import type { Photo as PhotoData } from '../data/photos';
 
 /**
- * Toute photographie de la plateforme passe par ici, et porte son crédit.
+ * Toute photographie passe par ici, et porte son crédit.
  *
- * Ce n'est pas seulement une obligation de licence : afficher le nom de
- * l'auteur et le lieu est exactement ce qui distingue une image documentaire
- * d'une image de catalogue. Le crédit fait donc partie du design.
+ * Ce n'est pas seulement une obligation de licence : afficher le lieu et
+ * l'auteur est exactement ce qui distingue une image documentaire d'une image
+ * de catalogue. Le crédit fait donc partie du dessin.
+ *
+ * Le cadre porte `data-wipe` : il se dévoile de bas en haut à l'entrée dans
+ * l'écran, et l'image se décompresse en même temps (cf. lib/motion.ts).
  */
 export function Photo({
   photo,
@@ -14,23 +17,25 @@ export function Photo({
   creditLink = true,
   sizes,
   priority,
+  wipe = true,
   className = '',
 }: {
   photo: PhotoData;
   ratio?: string;
-  /** `hover` : crédit révélé au survol. `always` : crédit toujours visible. */
   credit?: 'hover' | 'always' | 'none';
-  /**
-   * Le crédit pointe normalement vers la page Commons. Passer `false` quand la
-   * photo est déjà à l'intérieur d'un lien : un <a> dans un <a> est invalide.
-   */
+  /** `false` quand la photo est déjà dans un lien : un <a> dans un <a> est invalide. */
   creditLink?: boolean;
   sizes?: string;
   priority?: boolean;
+  wipe?: boolean;
   className?: string;
 }) {
   return (
-    <figure className={`photo photo--${credit} ${className}`} style={{ aspectRatio: ratio }}>
+    <figure
+      className={`photo photo--${credit} ${className}`}
+      style={{ aspectRatio: ratio }}
+      {...(wipe ? { 'data-wipe': '' } : {})}
+    >
       <img
         src={photo.src}
         srcSet={photo.srcset}

@@ -12,7 +12,7 @@ export function HostCard({
   onPick: (host: Host, exp: Experience) => void;
 }) {
   return (
-    <article className="host reveal">
+    <article className="host">
       <header className="host__head">
         <Monogram name={host.firstName} size={60} />
         <div className="host__id">

@@ -15,7 +15,7 @@ import { Selection } from './components/Selection';
 import { StayOptional } from './components/StayOptional';
 import { Trust } from './components/Trust';
 import type { Experience, Host } from './data/hosts';
-import { useReveal } from './lib/useReveal';
+import { useScreenIn, useSiteMotion } from './lib/motion';
 import { useRoute } from './lib/useRoute';
 
 export function App() {
@@ -34,6 +34,10 @@ export function App() {
   );
 
   useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
+
+  useEffect(() => {
     if (!booting) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -42,13 +46,13 @@ export function App() {
     };
   }, [booting]);
 
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-  }, [theme]);
+  const screen = route.name === 'destination' ? `destination:${route.slug}` : 'home';
 
-  // Le routage est un simple changement de fragment : les nouveaux `.reveal`
-  // doivent être réobservés à chaque écran.
-  useReveal([route.name, route.name === 'destination' ? route.slug : '']);
+  // La chorégraphie est remontée à chaque écran, et seulement quand le loader
+  // a fini : sinon les déclencheurs de scroll se calculent sur une page encore
+  // verrouillée et se figent.
+  useSiteMotion([screen, booting]);
+  useScreenIn(screen);
 
   const onPick = useCallback((host: Host, exp: Experience) => setPicked({ host, exp }), []);
 
@@ -61,7 +65,7 @@ export function App() {
       {route.name === 'destination' ? (
         <DestinationPage slug={route.slug} onPick={onPick} />
       ) : (
-        <main>
+        <main data-screen>
           <Hero />
           <Manifesto />
           <HowItWorks />

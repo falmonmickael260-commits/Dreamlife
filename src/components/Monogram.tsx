@@ -2,17 +2,20 @@ import { initialsOf } from '../lib/format';
 
 /**
  * Les profils d'hôtes de ce prototype sont fictifs. Leur donner le portrait
- * d'une personne réelle serait prêter un faux nom et une fausse histoire à
+ * d'une personne réelle serait prêter un faux prénom et une fausse histoire à
  * quelqu'un qui n'a rien demandé — on dessine donc un monogramme, dérivé du
  * prénom, dont la teinte est stable pour un hôte donné.
+ *
+ * Les six teintes restent dans la gamme de la marque : grès rosé, or brûlé,
+ * pierre, vert profond. Aucune couleur vive.
  */
 const TONES = [
-  ['#B0532F', '#F0DCD2'],
-  ['#1D3A31', '#DCE7E1'],
-  ['#8A5A2B', '#F0E3CF'],
-  ['#5B3A52', '#EADFE7'],
-  ['#2F4A66', '#DCE5EE'],
-  ['#6B5220', '#EFE7CF'],
+  ['#8a5a4e', '#f2e6e1'],
+  ['#1f3a33', '#dfe7e2'],
+  ['#8b6413', '#f3ead6'],
+  ['#6b4a5e', '#eee3ea'],
+  ['#3f5060', '#e3e9ee'],
+  ['#7a5230', '#f1e6db'],
 ] as const;
 
 export function Monogram({ name, size = 56 }: { name: string; size?: number }) {
@@ -24,13 +27,7 @@ export function Monogram({ name, size = 56 }: { name: string; size?: number }) {
     <span
       aria-hidden="true"
       className="monogram"
-      style={{
-        width: size,
-        height: size,
-        background: bg,
-        color: fg,
-        fontSize: size * 0.34,
-      }}
+      style={{ width: size, height: size, background: bg, color: fg, fontSize: size * 0.33 }}
     >
       {initialsOf(name)}
     </span>

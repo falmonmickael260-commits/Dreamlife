@@ -1,72 +1,72 @@
 /*
  * DreamLife — jetons de marque.
  *
- * La palette est volontairement chaude et terrienne : la plateforme parle de
- * cuisines, de marchés et de seuils de maison, pas de halls d'aéroport. Le
- * bleu corporate est banni, l'accent est une terre cuite qu'on retrouve de
- * Naples à Marrakech.
+ * Registre : revue de voyage haut de gamme. Ce qui tient le niveau, dans
+ * l'ordre : un serif d'affichage à fort contraste (Playfair Display), de
+ * grandes surfaces vides, des filets d'un pixel, des capitales très espacées,
+ * et un accent employé presque jamais.
+ *
+ * La palette est une pierre chaude — ivoire, encre, or brûlé — adoucie d'un
+ * rosé de grès qui sert aux aplats et aux détails. Aucun bleu corporate,
+ * aucune couleur vive : la couleur vient des photographies, pas de l'interface.
  */
 :root {
   color-scheme: light;
 
   /* Encre et papier */
-  --ink: #171310;
-  --ink-2: #413830;
-  --muted: #8b7f72;
-  --paper: #fbf8f3;
-  --paper-2: #f3ece2;
-  --paper-3: #eae1d4;
-  --line: #e0d7c9;
-  --line-strong: #cbbfae;
+  --ink: #1c1917;
+  --ink-2: #4b443e;
+  --muted: #8d8279;
+  --faint: #b6ab9f;
+  --paper: #fbf8f4;
+  --paper-2: #f4efe8;
+  --paper-3: #eae2d8;
+  --line: #e4ddd3;
+  --line-2: #d2c8bb;
 
-  /* Accents */
-  --clay: #b0532f; /* terre cuite — action, chiffres, soulignés */
-  --clay-soft: #f0dcd2;
-  --ochre: #c68a45;
-  --pine: #1d3a31; /* ancrage sombre des sections pleines */
+  /* Accents — rares par construction */
+  --gold: #a16207; /* or brûlé : chiffres, filets actifs, survols */
+  --blush: #e3cdc4; /* grès rosé : aplats, monogrammes, soulignés */
+  --blush-soft: #f2e6e1;
+  --pine: #1f3a33;
 
   /* Typographie */
-  --display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --display: 'Playfair Display', 'Iowan Old Style', Palatino, Georgia, serif;
   --text: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  --t-hero: clamp(3rem, 7.8vw, 7rem);
-  --t-h2: clamp(2.1rem, 4.4vw, 3.9rem);
-  --t-h3: clamp(1.3rem, 2vw, 1.7rem);
-  --t-lead: clamp(1.1rem, 1.6vw, 1.4rem);
-  --t-body: 1rem;
-  --t-small: 0.875rem;
-  --t-meta: 0.6875rem;
+  --t-hero: clamp(3.1rem, 8.4vw, 8.5rem);
+  --t-h2: clamp(2.2rem, 5vw, 4.6rem);
+  --t-h3: clamp(1.4rem, 2.2vw, 1.95rem);
+  --t-lead: clamp(1.05rem, 1.35vw, 1.2rem);
+  --t-body: 0.9375rem;
+  --t-small: 0.8125rem;
+  --t-meta: 0.625rem;
 
-  /* Rythme */
-  --gut: clamp(1.5rem, 5vw, 5rem);
-  --section: clamp(5.5rem, 11vw, 12rem);
-  --max: 1400px;
-  --radius: 2px;
-  --radius-card: 4px;
+  /* Rythme — dial « spacieux » */
+  --gut: clamp(1.5rem, 5.5vw, 6rem);
+  --section: clamp(6rem, 13vw, 15rem);
+  --max: 1520px;
+  --radius: 0px;
 
-  /* Mouvement — lent, jamais rebondissant : on regarde des photographies */
-  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-  --slow: 900ms;
-  --mid: 460ms;
-  --fast: 200ms;
-}
-
-:root[data-theme='dark'],
-html:not([data-theme='light']) {
-  /* le mode sombre est piloté explicitement, cf. base.css */
+  /* Mouvement */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --slow: 1100ms;
+  --mid: 520ms;
+  --fast: 220ms;
 }
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --ink: #f6f1e9;
-  --ink-2: #cbc1b5;
-  --muted: #9a8f82;
-  --paper: #13110f;
-  --paper-2: #1b1815;
-  --paper-3: #241f1b;
-  --line: #322c26;
-  --line-strong: #4a4239;
-  --clay: #d97a52;
-  --clay-soft: #33221a;
-  --ochre: #d9a668;
+  --ink: #f4efe7;
+  --ink-2: #c8bfb4;
+  --muted: #968b7f;
+  --faint: #6d6458;
+  --paper: #110f0d;
+  --paper-2: #191613;
+  --paper-3: #221e19;
+  --line: #2d2721;
+  --line-2: #453d34;
+  --gold: #d9a441;
+  --blush: #6b4f47;
+  --blush-soft: #2a211e;
 }

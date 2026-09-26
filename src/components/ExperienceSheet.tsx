@@ -85,7 +85,7 @@ export function ExperienceSheet({ host, exp, onClose }: Props) {
               Prototype — aucune demande n’est envoyée, aucun paiement n’est collecté.
             </p>
             <button className="btn" onClick={onClose}>
-              Continuer à explorer
+              <span>Continuer à explorer</span>
             </button>
           </div>
         ) : (
@@ -183,7 +183,7 @@ export function ExperienceSheet({ host, exp, onClose }: Props) {
                   </small>
                 </p>
                 <button className="btn" type="submit">
-                  Envoyer la demande
+                  <span>Envoyer la demande</span>
                 </button>
               </div>
             </form>

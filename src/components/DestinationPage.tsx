@@ -47,7 +47,7 @@ export function DestinationPage({
   const gallery = photosOf(slug).slice(1, 4);
 
   return (
-    <main className="dp">
+    <main className="dp" data-screen>
       <div className="dp__hero">
         <img
           className="dp__hero-img"
@@ -77,9 +77,9 @@ export function DestinationPage({
 
       <section className="wrap dp__intro">
         <div className="dp__intro-text">
-          <p className="lead reveal">{dest.intro}</p>
+          <p className="lead" data-rise>{dest.intro}</p>
         </div>
-        <dl className="dp__facts reveal" data-reveal-delay="100">
+        <dl className="dp__facts" data-rise-group>
           <div>
             <dt>Ce que vous entendrez</dt>
             <dd>{dest.languages.join(', ')}</dd>
@@ -100,22 +100,22 @@ export function DestinationPage({
       </section>
 
       <section className="wrap dp__life">
-        <div className="eyebrow reveal">
+        <div className="eyebrow" data-rise>
           <span className="eyebrow__num">—</span>
           <span>Ce qui se passe ici tous les jours</span>
         </div>
-        <ul className="dp__life-list">
+        <ul className="dp__life-list" data-rise-group>
           {dest.life.map((l, i) => (
-            <li className="reveal" data-reveal-delay={i * 90} key={l}>
+            <li key={l}>
               <span className="dp__life-n">{String(i + 1).padStart(2, '0')}</span>
               <span className="dp__life-t">{l}</span>
             </li>
           ))}
         </ul>
         {gallery.length > 0 && (
-          <div className="dp__gallery">
-            {gallery.map((p, i) => (
-              <div className="reveal" data-reveal-delay={i * 100} key={p.id}>
+          <div className="dp__gallery" data-rise-group>
+            {gallery.map((p) => (
+              <div key={p.id}>
                 <Photo photo={p} ratio="3 / 2" credit="always" sizes="(max-width: 800px) 100vw, 33vw" />
               </div>
             ))}
@@ -126,15 +126,15 @@ export function DestinationPage({
       <section className="wrap dp__hosts">
         <div className="dp__hosts-head">
           <div>
-            <div className="eyebrow reveal">
+            <div className="eyebrow" data-rise>
               <span className="eyebrow__num">—</span>
               <span>Les habitants qui vous reçoivent</span>
             </div>
-            <h2 className="dp__hosts-title reveal" data-reveal-delay="70">
+            <h2 className="dp__hosts-title" data-rise>
               {hosts.length} hôtes à {dest.city}
             </h2>
           </div>
-          <div className="filters reveal" data-reveal-delay="110" role="group" aria-label="Filtrer par forme de rencontre">
+          <div className="filters" data-rise role="group" aria-label="Filtrer par forme de rencontre">
             <button
               className={`chip${filter === 'all' ? ' is-on' : ''}`}
               onClick={() => setFilter('all')}
@@ -155,7 +155,7 @@ export function DestinationPage({
           </div>
         </div>
 
-        <div className="dp__hosts-grid">
+        <div className="dp__hosts-grid" data-rise-group>
           {shown.map((h) => (
             <HostCard host={h} onPick={onPick} key={h.id} />
           ))}

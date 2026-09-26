@@ -15,17 +15,19 @@ export function Selection({ onPick }: { onPick: (host: Host, exp: Experience) =>
   return (
     <section className="section picks">
       <div className="wrap">
-        <div className="eyebrow reveal">
+        <div className="eyebrow" data-rise>
           <span className="eyebrow__num">05</span>
           <span>Cette semaine sur DreamLife</span>
         </div>
-        <h2 className="picks__title reveal" data-reveal-delay="80">
-          Six invitations
+        <h2 className="picks__title" data-line-group>
+          <span className="mask">
+            <span data-line>Six invitations</span>
+          </span>
         </h2>
 
-        <ul className="picks__grid">
-          {items.map(({ host, exp }, i) => (
-            <li className="pick reveal" data-reveal-delay={(i % 3) * 80} key={exp.id}>
+        <ul className="picks__grid" data-rise-group>
+          {items.map(({ host, exp }) => (
+            <li className="pick" key={exp.id}>
               <button className="pick__btn" onClick={() => onPick(host, exp)}>
                 <p className="pick__kind">
                   <Glyph id={exp.kind} size={17} />
