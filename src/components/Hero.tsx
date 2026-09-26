@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import { HERO_ROTATION } from '../data/photos';
 
 /**
- * Le hero fait défiler trois photographies documentaires en fondu très lent.
- * Aucun texte n'est posé sur un visage : le bandeau de texte occupe le bas de
- * l'écran et les images sont cadrées en conséquence.
+ * Trois photographies documentaires en fondu très lent. Le texte tient en
+ * quatre lignes : la photographie doit porter, pas le paragraphe.
  */
 export function Hero() {
   const [i, setI] = useState(0);
@@ -37,10 +36,7 @@ export function Hero() {
       </div>
 
       <div className="hero__body wrap">
-        <p className="hero__kicker">
-          Marseille · Naples · Marrakech · Tunis · Kyoto · Chiang Mai · Ubud · Medellín · Cusco ·
-          Salvador
-        </p>
+        <p className="hero__kicker">Dix villes · Quatre continents</p>
 
         <h1 className="hero__title">
           Découvrez le monde
@@ -49,14 +45,14 @@ export function Hero() {
         </h1>
 
         <p className="hero__lead">
-          DreamLife met en relation les voyageurs et les habitants qui acceptent de partager
-          quelques heures de leur vie — un repas, un quartier, un savoir-faire. L’hébergement
-          n’est jamais obligatoire.
+          Un habitant vous ouvre quelques heures de sa vie.
+          <br />
+          L’hébergement n’est jamais obligatoire.
         </p>
 
         <div className="hero__cta">
           <a className="btn" href="#destinations">
-            Voir les dix destinations
+            Voir les destinations
           </a>
           <a className="btn btn--ghost" href="#rencontres">
             Ce que l’on peut vivre

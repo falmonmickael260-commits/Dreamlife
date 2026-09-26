@@ -20,7 +20,7 @@ export function Selection({ onPick }: { onPick: (host: Host, exp: Experience) =>
           <span>Cette semaine sur DreamLife</span>
         </div>
         <h2 className="picks__title reveal" data-reveal-delay="80">
-          Six invitations, six villes
+          Six invitations
         </h2>
 
         <ul className="picks__grid">

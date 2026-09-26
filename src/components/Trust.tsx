@@ -1,20 +1,8 @@
 const POINTS = [
-  {
-    title: 'Chaque hôte est rencontré',
-    body: 'Pas de validation automatique : un membre de l’équipe locale rencontre l’hôte chez lui avant la mise en ligne, et revient une fois par an.',
-  },
-  {
-    title: 'Le prix va à l’habitant',
-    body: 'L’hôte fixe son prix et en garde 85 %. La commission de la plateforme est affichée sur chaque fiche, avant la réservation.',
-  },
-  {
-    title: 'Rien n’est débité avant l’accord',
-    body: 'Vous écrivez, l’hôte répond, et le paiement n’intervient qu’ensuite. Annulation sans frais jusqu’à quarante-huit heures avant.',
-  },
-  {
-    title: 'Les langues sont dites franchement',
-    body: 'Si votre hôte parle trois mots d’anglais, c’est écrit. Beaucoup des meilleurs moments se passent sans langue commune.',
-  },
+  { title: 'Chaque hôte est rencontré', body: 'Chez lui, avant la mise en ligne. Puis une fois par an.' },
+  { title: 'L’hôte garde 85 %', body: 'Il fixe son prix. La commission est affichée avant de réserver.' },
+  { title: 'Rien n’est débité avant l’accord', body: 'Annulation sans frais jusqu’à 48 heures avant.' },
+  { title: 'Les langues sont dites franchement', body: 'Les meilleurs moments se passent souvent sans langue commune.' },
 ];
 
 export function Trust() {

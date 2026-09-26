@@ -19,7 +19,7 @@ export function DestinationGrid() {
               <span>Dix destinations pour commencer</span>
             </div>
             <h2 className="dests__title reveal" data-reveal-delay="80">
-              Quatre continents, dix villes,
+              Quatre continents,
               <br />
               <em>trente habitants</em>
             </h2>
@@ -56,10 +56,9 @@ export function DestinationGrid() {
                   <div className="dest__body">
                     <p className="dest__country">{d.country}</p>
                     <h3 className="dest__city">{d.city}</h3>
-                    <p className="dest__tag">{d.tagline}</p>
                     <p className="dest__foot">
                       <span>
-                        {hosts} hôtes · à partir de {euros(d.from)}
+                        {hosts} hôtes · dès {euros(d.from)}
                       </span>
                       <span className="dest__arrow" aria-hidden="true">
                         →

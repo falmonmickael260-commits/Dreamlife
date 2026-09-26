@@ -54,15 +54,12 @@ export function Footer() {
 
         <div className="foot__legal">
           <p>
-            <strong>Prototype.</strong> Les trente hôtes et leurs soixante expériences sont
-            fictifs et servent la démonstration. Aucune réservation n’est possible, aucun
-            paiement n’est collecté.
+            <strong>Prototype.</strong> Hôtes et expériences sont fictifs. Aucun paiement n’est
+            collecté.
           </p>
           <p>
-            Les photographies documentaires proviennent de Wikimedia Commons, sous licences
-            libres, et portent le nom de leur auteur au survol. Elles illustrent des lieux et des
-            scènes de vie réelles : elles ne représentent pas les hôtes fictifs de ce prototype,
-            dont les profils s’affichent avec un monogramme dessiné.
+            Photographies documentaires : Wikimedia Commons, licences libres, auteur affiché au
+            survol. Elles montrent des lieux réels, jamais les hôtes de ce prototype.
           </p>
           <p className="foot__copy">© {new Date().getFullYear()} DreamLife</p>
         </div>

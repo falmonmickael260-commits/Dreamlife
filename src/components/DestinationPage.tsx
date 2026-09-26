@@ -162,8 +162,7 @@ export function DestinationPage({
         </div>
 
         <p className="dp__proto">
-          Profils de démonstration : les prénoms, les citations et les tarifs sont écrits pour ce
-          prototype. Les photographies ci-dessus documentent la ville, pas ces personnes.
+          Profils de démonstration. Les photographies documentent la ville, pas ces personnes.
         </p>
       </section>
     </main>

@@ -27,9 +27,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Marseille',
     country: 'France',
     region: 'Europe',
-    tagline: 'Une ville qui ne se visite pas : elle s’habite, fort et à voix haute.',
+    tagline: 'Elle ne se visite pas. Elle s’habite, fort et à voix haute.',
     intro:
-      'Marseille se raconte par ses quartiers plus que par son port. À Noailles on fait ses courses en quatre langues ; à l’Estaque on mange des panisses debout ; dans les cabanons de la Pointe Rouge on déjeune jusqu’à cinq heures de l’après-midi.',
+      'Marseille se raconte par ses quartiers plus que par son port. À Noailles on fait ses courses en quatre langues ; à l’Estaque on mange des panisses debout, face à l’eau.',
     life: [
       'Les courses du samedi matin rue du Marché-des-Capucins',
       'La partie de pétanque qui décide de l’apéritif',
@@ -44,9 +44,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Naples',
     country: 'Italie',
     region: 'Europe',
-    tagline: 'Ici la rue est le salon commun, et tout le monde y a sa chaise.',
+    tagline: 'La rue est le salon commun, et tout le monde y a sa chaise.',
     intro:
-      'À Naples, la vie se passe en bas de chez soi. Le linge tendu au-dessus des ruelles, le café bu debout en trente secondes, le ragù du dimanche qui mijote depuis l’aube : rien de tout cela n’est un spectacle, c’est l’organisation normale de la journée.',
+      'À Naples, la vie se passe en bas de chez soi. Le linge au-dessus des ruelles, le café bu debout, le ragù du dimanche : l’organisation normale d’une journée.',
     life: [
       'Le marché de la Pignasecca à sept heures du matin',
       'Le caffè sospeso — celui qu’on paie pour l’inconnu d’après',
@@ -61,9 +61,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Marrakech',
     country: 'Maroc',
     region: 'Maghreb',
-    tagline: 'Derrière chaque porte basse de la médina, il y a une cour et du thé.',
+    tagline: 'Derrière chaque porte basse de la médina, une cour et du thé.',
     intro:
-      'La médina n’est pas un décor : c’est un système de voisinage. Le four à pain du quartier cuit encore la pâte des familles, les artisans travaillent dans des ateliers de trois mètres carrés, et le hammam du coin reste le vrai centre social du derb.',
+      'La médina n’est pas un décor, c’est un système de voisinage. Le four du quartier cuit encore la pâte des familles, et les artisans travaillent dans trois mètres carrés.',
     life: [
       'Porter sa pâte au four collectif du derb',
       'Le thé versé de haut, trois fois, chez le voisin',
@@ -78,9 +78,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Tunis',
     country: 'Tunisie',
     region: 'Maghreb',
-    tagline: 'Une médina qui travaille, un café où l’on refait le monde en boucle.',
+    tagline: 'Une médina qui travaille, un café où l’on refait le monde.',
     intro:
-      'Tunis vit entre la médina et la mer. On y déjeune d’un lablabi brûlant dans un bol de pain rassis, on joue au tawla des heures au fond d’un café, et le couscous du vendredi rassemble encore trois générations autour du même plat.',
+      'Tunis vit entre la médina et la mer. Un lablabi brûlant le matin, des parties de tawla interminables, et le couscous du vendredi qui rassemble trois générations.',
     life: [
       'Le lablabi du matin, préparé devant vous',
       'Les parties de tawla interminables du souk El Attarine',
@@ -95,9 +95,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Kyoto',
     country: 'Japon',
     region: 'Asie',
-    tagline: 'La ville la plus discrète du monde, si on prend le temps d’être invité.',
+    tagline: 'La ville la plus discrète du monde, si l’on est invité.',
     intro:
-      'Kyoto ne se livre pas aux horaires de visite. Elle se comprend dans une machiya de bois où l’on retire ses chaussures, dans un atelier de tissage de Nishijin qui n’a pas changé de métier depuis quatre générations, dans la cuisine obanzai que l’on prépare pour soi et pas pour les cartes.',
+      'Kyoto ne se livre pas aux horaires de visite. Elle se comprend dans une machiya de bois, dans un atelier de tissage de Nishijin, dans une cuisine obanzai faite pour soi.',
     life: [
       'Le marché de Nishiki avant l’ouverture des boutiques',
       'Les métiers à tisser de Nishijin, encore en bois',
@@ -112,9 +112,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Chiang Mai',
     country: 'Thaïlande',
     region: 'Asie',
-    tagline: 'Le Nord thaï se mange, se teint à l’indigo et se lève très tôt.',
+    tagline: 'Le Nord thaï se mange, se teint à l’indigo, se lève tôt.',
     intro:
-      'Chiang Mai est une ville d’artisans et de cuisiniers. Le khao soi n’a pas deux fois la même recette d’une famille à l’autre, les villages de Sankamphaeng vivent encore de l’argent et du bois, et l’aumône du matin aux moines se fait avant que la chaleur ne tombe sur la ville.',
+      'Chiang Mai est une ville d’artisans et de cuisiniers. Le khao soi change de recette d’une famille à l’autre, et l’aumône aux moines se fait avant la chaleur.',
     life: [
       'L’aumône du matin, à six heures, devant la maison',
       'Le curry pilé au mortier, jamais au robot',
@@ -129,9 +129,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Ubud',
     country: 'Indonésie',
     region: 'Asie',
-    tagline: 'Un village où chaque journée commence par une offrande posée à terre.',
+    tagline: 'Chaque journée commence par une offrande posée à terre.',
     intro:
-      'Ubud est d’abord une organisation villageoise : le banjar décide, le subak partage l’eau des rizières, et les canang sari sont tressés puis déposés chaque matin devant les maisons. Les familles vivent dans des enceintes où trois générations partagent la même cour.',
+      'Ubud est d’abord une organisation villageoise : le banjar décide, le subak partage l’eau des rizières, et trois générations partagent la même cour.',
     life: [
       'Les canang sari tressés au réveil, posés sans cérémonie',
       'L’eau des rizières répartie par le subak, depuis mille ans',
@@ -146,9 +146,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Medellín',
     country: 'Colombie',
     region: 'Amérique du Sud',
-    tagline: 'Une ville qui a changé d’histoire, et qui tient à la raconter elle-même.',
+    tagline: 'Une ville qui a changé d’histoire et tient à la raconter.',
     intro:
-      'Medellín se lit dans ses barrios accrochés à la pente. Les escaliers mécaniques de la Comuna 13 y sont d’abord un moyen de rentrer chez soi, le tinto se boit dix fois par jour debout, et la salsa se danse dans des salons de quartier que personne n’a mis sur une carte.',
+      'Medellín se lit dans ses barrios accrochés à la pente. Les escaliers de la Comuna 13 servent d’abord à rentrer chez soi, et la salsa se danse dans des salons de quartier.',
     life: [
       'Le tinto de six heures, servi dans un gobelet minuscule',
       'Le marché Minorista, où l’on connaît son marchand par son prénom',
@@ -163,9 +163,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Cusco',
     country: 'Pérou',
     region: 'Amérique du Sud',
-    tagline: 'À 3 400 mètres, on tisse, on partage et on prend son temps.',
+    tagline: 'À 3 400 mètres, on tisse, on partage, on prend son temps.',
     intro:
-      'Cusco ne se résume pas au point de départ d’un trek. C’est une ville quechua où le marché de San Pedro nourrit les familles, où les tisseuses de Chinchero lisent leurs motifs comme une langue, et où le repas se cuit encore sous la terre pour les grandes occasions.',
+      'Cusco n’est pas qu’un départ de trek. C’est une ville quechua où San Pedro nourrit les familles et où les tisseuses lisent leurs motifs comme une langue.',
     life: [
       'La soupe du matin au marché de San Pedro, avant six heures',
       'Les motifs tissés qui racontent une vallée, pas une mode',
@@ -180,9 +180,9 @@ export const DESTINATIONS: Destination[] = [
     city: 'Salvador de Bahia',
     country: 'Brésil',
     region: 'Amérique du Sud',
-    tagline: 'Le tambour n’est pas une attraction : c’est la manière de compter le temps.',
+    tagline: 'Le tambour n’est pas une attraction : c’est l’heure qu’il est.',
     intro:
-      'Salvador est la ville la plus africaine des Amériques, et cela se vit au quotidien : l’acarajé frit au coin de la rue par des baianas qui tiennent leur place depuis trente ans, la roda de capoeira qui se forme sans prévenir, les répétitions de percussions qui traversent les murs du Rio Vermelho.',
+      'Salvador est la ville la plus africaine des Amériques, et cela se vit au quotidien : l’acarajé frit au coin de la rue, la roda qui se forme sans prévenir.',
     life: [
       'L’acarajé frit devant vous, à la tombée du jour',
       'La roda de capoeira qui se forme en cinq minutes',

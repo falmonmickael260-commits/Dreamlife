@@ -55,7 +55,7 @@ export function ExperienceSheet({ host, exp, onClose }: Props) {
             <h2 className="sheet__done-title">Votre demande est partie chez {host.firstName}.</h2>
             <p className="sheet__done-body">
               {host.firstName} répond en général sous vingt-quatre heures. Rien n’est débité
-              avant son accord : vous échangez d’abord, vous confirmez ensuite.
+              avant son accord.
             </p>
             <dl className="sheet__recap">
               <div>
@@ -82,8 +82,7 @@ export function ExperienceSheet({ host, exp, onClose }: Props) {
               </div>
             </dl>
             <p className="sheet__proto">
-              Prototype — aucune demande n’est réellement envoyée et aucun paiement n’est
-              collecté.
+              Prototype — aucune demande n’est envoyée, aucun paiement n’est collecté.
             </p>
             <button className="btn" onClick={onClose}>
               Continuer à explorer

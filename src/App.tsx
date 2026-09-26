@@ -6,6 +6,7 @@ import { ExperienceSheet } from './components/ExperienceSheet';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { HowItWorks } from './components/HowItWorks';
+import { Interlude } from './components/Interlude';
 import { Kinds } from './components/Kinds';
 import { Loader } from './components/Loader';
 import { Manifesto } from './components/Manifesto';
@@ -67,6 +68,7 @@ export function App() {
           <Kinds />
           <StayOptional />
           <DestinationGrid />
+          <Interlude />
           <Selection onPick={onPick} />
           <Trust />
           <BecomeHost />

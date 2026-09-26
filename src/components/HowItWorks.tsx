@@ -1,19 +1,7 @@
 const STEPS = [
-  {
-    n: '01',
-    title: 'Choisissez une ville, puis un habitant',
-    body: 'Dix destinations, une trentaine d’hôtes. On ne choisit pas un logement ni un circuit : on choisit une personne, son quartier et ce qu’elle propose de partager.',
-  },
-  {
-    n: '02',
-    title: 'Convenez d’un moment ensemble',
-    body: 'Vous écrivez à votre hôte avant de réserver. Deux heures ou trois jours, un repas ou un atelier — le cadre se décide à deux, jamais par la plateforme.',
-  },
-  {
-    n: '03',
-    title: 'Vivez la journée, pas le programme',
-    body: 'Le jour venu, vous suivez le rythme de quelqu’un qui vit là. Les imprévus font partie de ce que vous êtes venu chercher.',
-  },
+  { n: '01', title: 'Choisissez un habitant', body: 'Pas un logement, pas un circuit. Une personne.' },
+  { n: '02', title: 'Écrivez-lui', body: 'Le cadre se décide à deux, jamais par la plateforme.' },
+  { n: '03', title: 'Vivez sa journée', body: 'Vous suivez son rythme. Les imprévus font partie du voyage.' },
 ];
 
 export function HowItWorks() {
