@@ -112,6 +112,29 @@
   }
 }
 
+/* Sur un téléphone, la barre doit tenir sur une seule ligne sans que le bouton
+   ne se casse en deux. */
+@media (max-width: 520px) {
+  .nav__inner {
+    height: 64px;
+    gap: 1rem;
+  }
+  .nav__actions {
+    gap: 0.5rem;
+  }
+  .nav__actions .btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.78rem;
+  }
+  .nav__theme {
+    width: 32px;
+    height: 32px;
+  }
+  .mark__word {
+    font-size: 1.05rem;
+  }
+}
+
 /* ══ Hero ══════════════════════════════════════════════════════════════════ */
 
 .hero {
@@ -151,6 +174,15 @@
   inset: 0;
   background:
     linear-gradient(to top, rgba(12, 10, 8, 0.92) 0%, rgba(12, 10, 8, 0.55) 34%, rgba(12, 10, 8, 0.08) 62%, rgba(12, 10, 8, 0.35) 100%);
+}
+
+/* Le texte du hero occupe presque tout l'écran d'un téléphone : le voile doit y
+   être franchement plus dense, sans quoi le paragraphe se perd dans la photo. */
+@media (max-width: 700px) {
+  .hero__scrim {
+    background:
+      linear-gradient(to top, rgba(12, 10, 8, 0.95) 0%, rgba(12, 10, 8, 0.82) 45%, rgba(12, 10, 8, 0.5) 72%, rgba(12, 10, 8, 0.55) 100%);
+  }
 }
 
 .hero__body {
@@ -969,10 +1001,15 @@
   object-position: center 45%;
 }
 
+/* Deux voiles et non un : celui du bas porte le titre, celui du haut garantit
+   la lisibilité de la barre de navigation quelle que soit la photographie —
+   certaines sont très claires en haut de cadre. */
 .dp__hero-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(12, 10, 8, 0.9), rgba(12, 10, 8, 0.35) 45%, rgba(12, 10, 8, 0.25));
+  background:
+    linear-gradient(to bottom, rgba(12, 10, 8, 0.66) 0%, rgba(12, 10, 8, 0.12) 22%, transparent 34%),
+    linear-gradient(to top, rgba(12, 10, 8, 0.9) 0%, rgba(12, 10, 8, 0.38) 45%, transparent 72%);
 }
 
 .dp__hero-body {
